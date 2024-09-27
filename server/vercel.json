@@ -1,0 +1,15 @@
+{
+  "builds": [
+    {
+      "src": "src",
+      "dest": ".",
+      "command": "npm run build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server/index.js"
+    }
+  ]
+}
