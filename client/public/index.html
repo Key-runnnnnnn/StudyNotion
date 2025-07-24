@@ -46,7 +46,7 @@
     </div>
   </div>
 
-  <div id="install-prompt" class="install-prompt">
+  <!-- <div id="install-prompt" class="install-prompt">
     <div class="install-prompt-header">
       <div class="install-prompt-header-text">
         <h3>Install Study Notion</h3>
@@ -57,10 +57,10 @@
       <p>Install our app to access all the features!</p>
       <button id="install-button" class="install-button">Install</button>
     </div>
-  </div>
+  </div> -->
 
   <script>
-    let deferredPrompt;
+    /* let deferredPrompt;
 
     function showInstallPrompt() {
       if (deferredPrompt) {
@@ -81,7 +81,7 @@
     installButton.addEventListener("click", function () {
       showInstallPrompt();
       document.getElementById("install-prompt").style.display = "none";
-    });
+    }); */
 
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", function () {
@@ -99,7 +99,7 @@
       });
 
       // Move the event listener for beforeinstallprompt here
-      window.addEventListener("beforeinstallprompt", function (event) {
+      /* window.addEventListener("beforeinstallprompt", function (event) {
         if (sessionStorage.getItem("installPrompt") === "true") {
           return false;
         }
@@ -110,15 +110,15 @@
         // Show the custom install prompt
         const installPrompt = document.getElementById("install-prompt");
         installPrompt.style.display = "block";
-      });
+      }); */
     }
-    document
+    /* document
       .getElementById("close-button")
       .addEventListener("click", function () {
         document.getElementById("install-prompt").style.display = "none";
         //dont show install prompt again
         sessionStorage.setItem("installPrompt", "true");
-      });
+      }); */
   </script>
 </body>
 
