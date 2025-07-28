@@ -34,12 +34,11 @@ const Catalog = () => {
       console.log(error);
     }
   };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     fetchSublinks();
   }, [Catalog]);
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const fetchCatalogPageData = async () => {
       const result = await getCatalogaPageData(categoryID, dispatch);
@@ -49,6 +48,7 @@ const Catalog = () => {
     if (categoryID) {
       fetchCatalogPageData();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoryID]);
 
   return (

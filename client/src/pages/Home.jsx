@@ -21,7 +21,6 @@ function Home() {
   const [CatalogPageData, setCatalogPageData] = useState(null);
   const categoryID = "6475dbeb49dcc886b5698441";
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const fetchCatalogPageData = async () => {
       const result = await getCatalogaPageData(categoryID, dispatch);
@@ -31,6 +30,7 @@ function Home() {
     if (categoryID) {
       fetchCatalogPageData();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categoryID]);
   const dispatch = useDispatch();
   return (

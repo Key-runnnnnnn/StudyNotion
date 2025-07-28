@@ -36,7 +36,6 @@ const CourseDetails = () => {
     }
   };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const getCourseDetails = async () => {
       const response = await fetchCourseDetails(courseId, dispatch);
@@ -44,6 +43,7 @@ const CourseDetails = () => {
       setCourseDetail(response);
     };
     getCourseDetails();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [courseId]);
 
   useEffect(() => {
