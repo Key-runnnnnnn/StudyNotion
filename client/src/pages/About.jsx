@@ -1,15 +1,15 @@
-import React from 'react'
-import HighlightText from '../Components/core/HomePage/HighlightText';
-import BannerImage1 from "../assets/Images/aboutus1.webp"
-import BannerImage2 from "../assets/Images/aboutus2.webp"
-import BannerImage3 from "../assets/Images/aboutus3.webp"
-import Quote from "../Components/core/AboutPage/Quote"
-import FoundingStory from "../assets/Images/FoundingStory.png"
-import StatsComponent from '../Components/core/AboutPage/Stats'
-import LearningGrid from '../Components/core/AboutPage/LearningGrid'
-import ContactFormSection from '../Components/core/AboutPage/ContactFormSection'
-import Footer from '../Components/common/Footer'
-import RatingSlider from '../Components/core/Ratings/RatingSlider';
+import React from "react";
+import HighlightText from "../Components/core/HomePage/HighlightText";
+import BannerImage1 from "../assets/Images/aboutus1.webp";
+import BannerImage2 from "../assets/Images/aboutus2.webp";
+import BannerImage3 from "../assets/Images/aboutus3.webp";
+import Quote from "../Components/core/AboutPage/Quote";
+import FoundingStory from "../assets/Images/FoundingStory.png";
+import StatsComponent from "../Components/core/AboutPage/Stats";
+import LearningGrid from "../Components/core/AboutPage/LearningGrid";
+import ContactFormSection from "../Components/core/AboutPage/ContactFormSection";
+// import Footer from '../Components/common/Footer'
+import RatingSlider from "../Components/core/Ratings/RatingSlider";
 
 const About = () => {
   return (
@@ -29,9 +29,9 @@ const About = () => {
           </header>
           <div className="sm:h-[70px] lg:h-[150px]"></div>
           <div className="absolute bottom-0 left-[50%] grid w-[100%] translate-x-[-50%] translate-y-[30%] grid-cols-3 gap-3 lg:gap-5">
-            <img src={BannerImage1} />
-            <img src={BannerImage2} />
-            <img src={BannerImage3} />
+            <img src={BannerImage1} alt="Student banner 1" />
+            <img src={BannerImage2} alt="Student banner 2" />
+            <img src={BannerImage3} alt="Student banner 3" />
           </div>
         </div>
       </section>
@@ -80,6 +80,7 @@ const About = () => {
               <img
                 className="shadow-[0_0_20px_0] shadow-[#FC6767]"
                 src={FoundingStory}
+                alt="Founding Story"
               />
             </div>
           </div>
@@ -138,6 +139,6 @@ const About = () => {
       </section>
     </div>
   );
-}
+};
 
-export default About
+export default About;

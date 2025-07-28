@@ -99,7 +99,7 @@ const NestedView = ({ handelChangeEditSectionName }) => {
                 return (
                   <div
                     onClick={(e) => {
-                      if (e.currentTarget != e.target) return;
+                      if (e.currentTarget !== e.target) return;
                       setviewSubSection(subSection);
                     }}
                     key={subSection._id}

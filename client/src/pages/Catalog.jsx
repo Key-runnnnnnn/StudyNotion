@@ -35,8 +35,8 @@ const Catalog = () => {
     }
   };
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     fetchSublinks();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [Catalog]);
 
   useEffect(() => {

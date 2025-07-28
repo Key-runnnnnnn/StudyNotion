@@ -42,6 +42,7 @@ const SubsectionModal = ({
       setValue("lectureVideo", modalData.videoUrl);
       // console.log("useeffect modalData", modalData);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [view, edit]);
 
   const isFormUpdated = () => {
