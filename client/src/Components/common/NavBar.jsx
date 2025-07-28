@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../assets/Logo/Logo-Full-Light.png";
+// import logo from "../../assets/Logo/Logo-Full-Light.png";
 import logo1 from "../../assets/Logo/career.png";
 import { Link, matchPath } from "react-router-dom";
 import { NavbarLinks } from "../../data/navbar-links";
@@ -87,7 +87,9 @@ const NavBar = ({ setProgress }) => {
 
   return (
     <div
-      className={` flex sm:relative bg-richblack-900 w-screen relative z-50 h-14 items-center justify-center border-b-[1px] border-b-richblack-700 translate-y-  transition-all duration-500`}
+      className={` flex sm:relative bg-richblack-900 w-screen relative z-50 h-14 items-center justify-center border-b-[1px] border-b-richblack-700 ${
+        visible ? "translate-y-0" : "translate-y-[-100%]"
+      } transition-all duration-500`}
     >
       <div className="flex w-11/12 max-w-maxContent items-center justify-between">
         <Link
