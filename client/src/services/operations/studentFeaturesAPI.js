@@ -1,7 +1,7 @@
 import { apiConnector } from "../apiConnector";
 import { studentEndpoints } from "../apis";
 import { toast } from "react-hot-toast";
-import rzplogo from "../../assets/Images/rzp.png";
+import rzplogo from "../../assets/Images/rzp1.png";
 import { resetCart } from "../../slices/cartSlice";
 
 
@@ -54,7 +54,7 @@ export async function buyCourse (token, courses, userDetails, navigate, dispatch
         currency: orderResponse.data.currency,
         amount: orderResponse.data.amount.toString(),
         order_id: orderResponse.data.orderId,
-        name: "Study Notion",
+        name: "Career Up",
         description: "Thank you for purchasing the course",
         image: rzplogo,
         prefill: {
