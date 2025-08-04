@@ -179,6 +179,11 @@ exports.verifySignature = async (req, res) => {
             const generatedSignature = crypto.createHmac("sha256", process.env.RAZORPAY_SECRET).update(body.toString()).digest("hex");
             if(generatedSignature === razorpay_signature) {
                 await enrolleStudent(courses, userId);
+            } else {
+                return res.status(400).json({
+                    success:false,
+                    message:'Invalid payment signature',
+                });
             }
 
         }
@@ -214,6 +219,10 @@ exports.sendPaymentSuccessEmail = async (req, res) => {
             `Study Notion Payment successful`,
             paymentSuccess(amount/100, paymentId, orderId, enrolledStudent.firstName, enrolledStudent.lastName),
         );
+        return res.status(200).json({
+            success:true,
+            message:'Payment success email sent',
+        });
 }
     catch(error) {
         console.error(error);

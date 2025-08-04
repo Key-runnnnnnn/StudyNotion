@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 const userRoutes = require("./routes/User");
-// const paymentRoutes = require("./routes/Payments");
+const paymentRoutes = require("./routes/Payments");
 const profileRoutes = require("./routes/Profile");
 const CourseRoutes = require("./routes/Course");
 
@@ -24,10 +24,10 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(
-	cors({
-		origin:"https://study-notion-olive-gamma.vercel.app",
-		credentials:true,
-	})
+  cors({
+    origin: ["https://study-notion-olive-gamma.vercel.app", "http://localhost:3000"],
+    credentials: true,
+  })
 )
 
 app.use(
@@ -41,7 +41,7 @@ cloudnairyconnect();
 
 app.use("/api/v1/auth", userRoutes);
 
-// app.use("/api/v1/payment", paymentRoutes);
+app.use("/api/v1/payment", paymentRoutes);
 
 app.use("/api/v1/profile", profileRoutes);
 
@@ -49,7 +49,7 @@ app.use("/api/v1/course", CourseRoutes);
 
 app.use("/api/v1/contact", require("./routes/ContactUs"));
 
-app.get("https://study-notion-olive-gamma.vercel.app/", (req, res) => {
+app.get("/", (req, res) => {
   res.status(200).json({
     message: "Welcome to the API",
   });
